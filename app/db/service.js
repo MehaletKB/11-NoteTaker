@@ -10,7 +10,7 @@ export default {
   async create(newEntry) {
     const currentEntry = await this.index();
     fs.writeFile(
-      `${realPath}/app/db.json`,
+      `${realPath}/app/db/db.json`,
       JSON.stringify([...currentEntry, newEntry])
     );
   },
