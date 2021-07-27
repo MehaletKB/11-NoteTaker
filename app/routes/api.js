@@ -13,4 +13,7 @@ router.post("/notes", ({ body }, res) => {
   res.status(201).send("Note Added!");
 });
 
+// router.delete("/notes/:id", (rep, res) => {});
+// db.remove();
+
 export default router;

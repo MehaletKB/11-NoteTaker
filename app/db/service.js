@@ -14,6 +14,10 @@ export default {
       JSON.stringify([...currentEntry, newEntry])
     );
   },
+
+  // async remove(unwantedEntry) {
+  //   fs.
+  // },
 };
 
 (async () => {
