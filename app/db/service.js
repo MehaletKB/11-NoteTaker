@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import { v4 as uuidv4 } from "uuid";
 
 let realPath = null;
 
@@ -7,7 +8,9 @@ export default {
     return JSON.parse(await fs.readFile(`${realPath}/app/db/db.json`));
   },
 
-  async create(newEntry) {
+  async create(entry) {
+    const { title, text } = entry;
+    const newEntry = { id: uuidv4(), title, text };
     const currentEntry = await this.index();
     fs.writeFile(
       `${realPath}/app/db/db.json`,
@@ -15,9 +18,11 @@ export default {
     );
   },
 
-  // async remove(unwantedEntry) {
-  //   fs.
-  // },
+  async remove(id) {
+    const notesArray = await this.index();
+    const index = notesArray.findIndex((i) => i.id === id);
+    notesArray.splice(index, 1);
+  },
 };
 
 (async () => {
