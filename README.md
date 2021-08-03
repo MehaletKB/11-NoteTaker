@@ -27,7 +27,7 @@ Must install node.js, express and use heroku to deploy.
 
 ## Usage:
 
-From the terminal, run node app/index.js. Then from a browser, go to localhost:3001, this will take you to the index.html page. From there click on "Get Started" to add notes.
+From the terminal, run node app/index.js (or npm start). Then from a browser, go to localhost:3001, this will take you to the index.html page. From there click on "Get Started" to add notes.
 
 ## Contact:
 

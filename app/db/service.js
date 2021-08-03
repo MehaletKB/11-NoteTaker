@@ -18,10 +18,12 @@ export default {
     );
   },
 
-  async remove(id) {
-    const notesArray = await this.index();
-    const index = notesArray.findIndex((i) => i.id === id);
-    notesArray.splice(index, 1);
+  remove(id) {
+    return this.index()
+      .then((res) => res.filter((note) => note.id !== id))
+      .then((filterRes) =>
+        fs.writeFile(`${realPath}/app/db/db.json`, JSON.stringify(filterRes))
+      );
   },
 };
 
