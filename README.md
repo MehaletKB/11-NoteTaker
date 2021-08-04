@@ -7,7 +7,7 @@
 ## Table of Contents:
 
 - [Description](#description)
-- [Link](#link)
+- [Heroku link and walkthrough video](#link)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
@@ -20,6 +20,8 @@ This application generates a webpage displaying employee profiles based on user 
 ## Link:
 
 https://pure-tor-58959.herokuapp.com/
+
+https://www.dropbox.com/s/pvcyukvnseqvodf/11-NoteTaker.mp4?dl=0
 
 ## Installation:
 
